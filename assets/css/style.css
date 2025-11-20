@@ -5,10 +5,12 @@
     font-family: "Cabin", sans-serif;
 }
 
+body {
+    overflow-x: hidden; /* يمنع السحب الأفقي */
+}
+
 header {
-    background: url(../img/header-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(../img/header-bg.png) no-repeat center center/cover;
     height: 100vh;
 }
 
@@ -21,7 +23,6 @@ nav {
 }
 
 nav div {
-    height: 100%;
     display: flex;
     align-items: center;
     gap: 3vw;
@@ -42,6 +43,7 @@ nav button,
 #next-level button,
 #choose-us button {
     width: 150px;
+    max-width: 100%;
     height: 45px;
     background-color: rgb(222, 65, 50);
     border-radius: 10px;
@@ -53,7 +55,7 @@ nav button,
 .hero {
     width: 90%;
     max-width: 555px;
-    margin-left: 5%;
+    margin: 0 auto;
     height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
@@ -80,4 +82,171 @@ nav button,
 .hero .sec-btn,
 #next-level button {
     background-color: white;
-    color: rgb(222, 65,
+    color: rgb(222, 65, 50);
+}
+
+#our-partners {
+    background-color: rgb(254, 249, 249);
+    padding: 5rem 5%;
+}
+
+#our-partners h1,
+#snowboard h1 {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 40px);
+    margin-bottom: 3rem;
+}
+
+#our-partners h1 span,
+#snowboard h1 span,
+#choose-us h1 span {
+    color: rgb(222, 65, 50);
+}
+
+#our-partners .logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#snowboard {
+    padding: 5rem 5%;
+}
+
+#snowboard .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+#snowboard .container .card {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#snowboard .container .card img {
+    width: 100%;
+    height: auto;
+}
+
+#next-level {
+    background: url(../img/banner.png) no-repeat center center/cover;
+    height: 320px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+#newsfeed {
+    width: 90%;
+    max-width: 1200px;
+    margin: 6rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#newsfeed h1 {
+    padding-bottom: 2rem;
+}
+
+#newsfeed .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#newsfeed .container .left-side,
+#newsfeed .container .right-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#newsfeed .container .left-side div img,
+#newsfeed .container .right-side div img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#choose-us {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 5%;
+    gap: 2rem;
+}
+
+#choose-us .left-side,
+#choose-us .right-side {
+    width: 100%;
+}
+
+#choose-us h1 {
+    font-size: clamp(1.5rem, 4vw, 40px);
+}
+
+#choose-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#choose-us .right-side input {
+    width: 100%;
+    max-width: 430px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 1rem;
+    background-color: rgb(242, 243, 244);
+    border: none;
+}
+
+footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(49, 59, 76, 0.8);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    #newsfeed .container {
+        flex-direction: row;
+    }
+
+    #newsfeed .container .left-side {
+        width: 66%;
+    }
+
+    #newsfeed .container .right-side {
+        width: 33%;
+    }
+
+    #snowboard .container .card {
+        width: 30%;
+    }
+
+    #choose-us {
+        flex-direction: row;
+        gap: 5%;
+        height: 300px;
+    }
+
+    #choose-us .left-side,
+    #choose-us .right-side {
+        width: 45%;
+    }
+}
